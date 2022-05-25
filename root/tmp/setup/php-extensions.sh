@@ -83,6 +83,9 @@ else
     echo "sqlsrv extension not available for ${TARGETPLATFORM} architecture, skipping"
 fi
 
+#Excimer 
+docker-php-ext-install excimer
+
 # Keep our image size down..
 pecl clear-cache
 apt-get remove --purge -y $BUILD_PACKAGES
